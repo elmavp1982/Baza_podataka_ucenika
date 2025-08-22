@@ -1,11 +1,3 @@
-student = {
-    "ime": "Ana",
-    "godine": 14,
-    "predmeti": ["Matematika", "Biologija"],
-    "ocjene": [5, 4, 5]
-}
-
-
 # Lista svih učenika
 students = []
 
