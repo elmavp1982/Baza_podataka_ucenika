@@ -21,11 +21,11 @@ Ovaj projekt predstavlja jednostavnu bazu podataka učenika, razvijenu radi lak�
    ```bash
    git clone https://github.com/elmavp1982/Baza_podataka_ucenika.git
 
-🚀 **Pokretanje**
+## 🚀 **Pokretanje**
   ```bash
   python baza_ucenika.py
 
-## **Primjer izlaza**
+## 🖥️ **Primjer izlaza**
   --- Baza podataka učenika ---
   1. Dodaj učenika
   2. Prikaži sve učenike
@@ -37,7 +37,7 @@ Ovaj projekt predstavlja jednostavnu bazu podataka učenika, razvijenu radi lak�
   8. Izlaz
   Izaberi opciju (1-7):
 
-👤 **Autor**
+## 👤 **Autor**
 - Ime: Elma Vrebac-Pasic
 - Github: https://github.com/elmavp1982
 
