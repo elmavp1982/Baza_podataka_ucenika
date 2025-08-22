@@ -17,14 +17,14 @@ Ovaj projekt predstavlja jednostavnu bazu podataka učenika, razvijenu radi lak�
 
 ## 📦 Instalacija
 
-Kloniraj repozitorij:
+Kloniraj repozitorij (iz bash gui-ja):
 ```bash
 git clone https://github.com/elmavp1982/Baza_podataka_ucenika.git
 ```
 
 ## 🚀 Pokretanje
 
-Pokreni program:
+Pokreni program (iz bash gui-ja):
 ```bash
 python baza_ucenika.py
 ```
