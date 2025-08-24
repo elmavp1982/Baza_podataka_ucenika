@@ -24,7 +24,7 @@ def add_student():
     }
 
     students.append(student)
-    print(f"✅ Učenik {ime} je uspješno dodan.")
+    print(f"Učenik {ime} je uspješno dodan.")
 
 # Brisanje učenika po imenu
 def remove_student():
@@ -38,9 +38,9 @@ def remove_student():
     obrisano = broj_prije - broj_poslije
 
     if obrisano == 0:
-        print("⚠️ Nema učenika s tim imenom.")
+        print("Nema učenika s tim imenom.")
     else:
-        print(f"✅ Uklonjeno {obrisano} učenika s imenom '{ime_za_brisanje}'.")
+        print(f"Uklonjeno {obrisano} učenika s imenom '{ime_za_brisanje}'.")
 
 # Pretraga učenika po imenu
 def find_student():
@@ -50,7 +50,7 @@ def find_student():
     pronadjeni = [s for s in students if s["ime"].lower() == ime_za_trazenje]
 
     if not pronadjeni:
-        print("⚠️ Nema učenika s tim imenom.")
+        print("Nema učenika s tim imenom.")
         return
 
     for i, student in enumerate(pronadjeni, start=1):
@@ -66,7 +66,7 @@ def find_best_student():
     print("\n--- Najbolji učenik ---")
 
     if not students:
-        print("⚠️ Nema unesenih učenika.")
+        print("Nema unesenih učenika.")
         return
 
     def uzmi_prosjek(student):
@@ -74,7 +74,7 @@ def find_best_student():
 
     najbolji = max(students, key=uzmi_prosjek)
 
-    print(f"\n🎓 Najbolji učenik je: {najbolji['ime']}")
+    print(f"\n Najbolji učenik je: {najbolji['ime']}")
     print(f"  Godine: {najbolji['godine']}")
     print(f"  Predmeti: {', '.join(najbolji['predmeti'])}")
     print(f"  Ocjene: {najbolji['ocjene']}")
@@ -85,7 +85,7 @@ def show_all():
     print("\n--- Lista svih učenika ---")
     
     if not students:
-        print("⚠️ Nema unesenih učenika.")
+        print("Nema unesenih učenika.")
         return
 
     for i, student in enumerate(students, start=1):
@@ -104,7 +104,7 @@ def sort_by_average():
     print("\n--- Sortiranje učenika po prosjeku ---")
 
     if not students:
-        print("⚠️ Nema unesenih učenika.")
+        print("Nema unesenih učenika.")
         return
 
     sortirani = sorted(students, key=get_average, reverse=True)
@@ -122,13 +122,13 @@ def filter_by_average():
     print("\n--- Filtriranje učenika po prosjeku ---")
 
     if not students:
-        print("⚠️ Nema unesenih učenika.")
+        print("Nema unesenih učenika.")
         return
 
     try:
         prag = float(input("Unesi minimalni prosjek (npr. 4.5): "))
     except ValueError:
-        print("❌ Neispravan unos. Molimo unesi broj.")
+        print("Neispravan unos. Molimo unesi broj.")
         return
 
     filtrirani = []
