@@ -32,7 +32,7 @@ def remove_student():
     ime_za_brisanje = input("Unesi ime učenika za brisanje: ").strip().lower()
 
     broj_prije = len(students)
-    students[:] = [s for s in students if s["ime"].lower() != ime_za_brisanje]
+    students = [s for s in students if s["ime"].lower() != ime_za_brisanje]
     broj_poslije = len(students)
 
     obrisano = broj_prije - broj_poslije
@@ -69,7 +69,10 @@ def find_best_student():
         print("⚠️ Nema unesenih učenika.")
         return
 
-    najbolji = max(students, key=lambda s: s["prosjek"])
+    def uzmi_prosjek(student):
+        return student["prosjek"]
+
+    najbolji = max(students, key=uzmi_prosjek)
 
     print(f"\n🎓 Najbolji učenik je: {najbolji['ime']}")
     print(f"  Godine: {najbolji['godine']}")
@@ -158,7 +161,7 @@ def main():
         print("7. Obriši učenika po imenu") 
         print("8. Izlaz")
 
-        choice = input("Izaberi opciju (1-7): ")
+        choice = input("Izaberi opciju (1-8): ")
 
         if choice == "1":
             add_student()
